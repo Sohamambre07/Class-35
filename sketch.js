@@ -97,3 +97,21 @@ function keyPressed(){
     if(keyCode === 32){
        slingshot.attach(bird.body);
     }}
+    
+
+    async function getTime(){
+var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata")
+
+var responseJson= await response.json()
+var time= responseJson.datetime.slice(11,13)
+console. log(time)
+
+if( time>7 && thime<19){
+  backgroundImg= loadImage("sprites/bg1.png")
+}
+else{
+backgroundImg= loadImage("sprites/bg2.jpg")
+}
+
+
+    }
